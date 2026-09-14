@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-50 text-slate-800 antialiased;
+        font-feature-settings: 'cv02','cv03','cv04','cv11';
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-white rounded-2xl shadow-sm border border-slate-100;
+    }
+
+    .card-hover {
+        @apply transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 hover:border-primary-100 cursor-pointer;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white text-sm font-semibold transition-all duration-150 shadow-sm hover:shadow-md;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 text-sm font-medium border border-slate-200 transition-all duration-150 shadow-sm;
+    }
+
+    .btn-danger {
+        @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-600 text-sm font-medium border border-red-100 transition-all duration-150;
+    }
+
+    .input-field {
+        @apply w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-primary-400 focus:bg-white focus:ring-2 focus:ring-primary-100 transition-all duration-150;
+    }
+
+    .gradient-brand {
+        background: linear-gradient(135deg, #2952f5 0%, #6090ff 50%, #ec4899 100%);
+    }
+}
+
+@layer utilities {
+    .mono {
+        font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+        letter-spacing: 0.08em;
+    }
+
+    .gradient-brand-text {
+        background: linear-gradient(135deg, #2952f5, #ec4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
